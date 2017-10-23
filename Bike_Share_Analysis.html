@@ -13097,7 +13097,7 @@ AAAmTygGAAAAAADA5AnFAAAAAAAAmDyhGAAAAAAAAJP3fzR7Otp9vbAmAAAAAElFTkSuQmCC
 <p><strong>Question 5</strong>: Use the parameters of the <code>.hist()</code> function to plot the distribution of trip times for the Subscribers in your selected city. Do the same thing for only the Customers. Add limits to the plots so that only trips of duration less than 75 minutes are plotted. As a bonus, set the plots up so that bars are in five-minute wide intervals. For each group, where is the peak of each distribution? How would you describe the shape of each distribution?</p>
 <p><strong>Answer</strong>:</p>
 <p>Well,for the subscriber trip times the peak values occured in the range 6-11 while for the customer its 16-21.</p>
-<p>I think both of these histogram curves are skewed towards left.</p>
+<p>I think both of these histogram curves are skewed towards right as for both the median is less than mean as we see from calculations below.</p>
 
 </div>
 </div>
@@ -13128,6 +13128,78 @@ AAAmTygGAAAAAADA5AnFAAAAAAAAmDyhGAAAAAAAAJP3fzR7Otp9vbAmAAAAAElFTkSuQmCC
 </pre></div>
 
 </div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[87]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">mean_subs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">sub_trip_times</span><span class="p">)</span>
+<span class="n">median_subs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">sub_trip_times</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">mean_subs</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">median_subs</span><span class="p">)</span> <span class="c1">## Median is less than mean so its a right skewed distribution.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>13.6807905239
+9.71666666667
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[89]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">mean_cuss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">cus_trip_times</span><span class="p">)</span>
+<span class="n">median_cuss</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">median</span><span class="p">(</span><span class="n">cus_trip_times</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">mean_cuss</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">median_cuss</span><span class="p">)</span> <span class="c1">## Median is less than mean so its a right skewed distribution.</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+<div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>32.7759513947
+21.2
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
